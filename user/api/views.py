@@ -17,7 +17,7 @@ def get_users(request):
         all_users = User.objects.all()
 
         res = {
-            "OK" : True,
+            "ok" : True,
         }
 
         user_list = []
@@ -43,14 +43,12 @@ def get_users(request):
             temp['activities'] = activities
             user_list.append(temp)
 
-        return Response(user_list)
+        res["members"] = user_list
+
+        return Response(res)
     
     except Exception as e:
         print(e)
         response_data = {}
         response_data['message'] = "Some error occured"
         return Response(response_data, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-class UserData(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
