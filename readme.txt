@@ -1,6 +1,12 @@
 1) Run this command to install dependencies:
 	pip install -r requirements.txt
 
+2) Run this command to make migrations:
+	python manage.py makemigrations
+
+3) Run this command to migrate:
+	python manage.py migrate
+
 2) Run this command to populate database with dummy data using fake values:
 	python manage.py load_dummy_data <count>
 
