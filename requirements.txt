@@ -1,0 +1,4 @@
+django
+djangorestframework
+factory_boy
+django-timezone-field
