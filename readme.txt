@@ -1,3 +1,5 @@
+A Django web application which generates fake data using Faker and saves in the database. We can use Custom management command to populate any no. of data in database.
+
 1) Run this command to install dependencies:
 	pip install -r requirements.txt
 
